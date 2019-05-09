@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot rpa="false" generated="20190509 19:26:53.811" generator="Robot 3.1.1 (Python 2.7.15 on win32)">
+<suite source="D:\T-Mobile\T-Mobile\ATOMS-UI" id="s1" name="ATOMS-UI">
+<suite source="D:\T-Mobile\T-Mobile\ATOMS-UI\testSuites" id="s1-s1" name="testSuites">
+<suite source="D:\T-Mobile\T-Mobile\ATOMS-UI\testSuites\sampleselenium.robot" id="s1-s1-s1" name="Sampleselenium">
+<test id="s1-s1-s1-t1" name="Adding employee to Empoyeelist">
+<kw type="setup" name="Open Browser for portal" library="atoms_UI_Keywords">
+<arguments>
+<arg>${HOST}</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to the given ``url``.</doc>
+<arguments>
+<arg>${HOST}</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20190509 19:26:54.080" level="INFO">Opening browser 'chrome' to base url 'https://opensource-demo.orangehrmlive.com/'.</msg>
+<status status="PASS" endtime="20190509 19:27:01.670" starttime="20190509 19:26:54.080"></status>
+</kw>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" endtime="20190509 19:27:02.819" starttime="20190509 19:27:01.672"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2s</arg>
+</arguments>
+<msg timestamp="20190509 19:27:04.822" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" endtime="20190509 19:27:04.823" starttime="20190509 19:27:02.820"></status>
+</kw>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<arguments>
+<arg>Wait Until Element Is Visible</arg>
+<arg>${login}</arg>
+<arg>timeout=60</arg>
+<arg>error=OrangeHRM is not opened Properly.</arg>
+</arguments>
+<assign>
+<var>${status}</var>
+</assign>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>${login}</arg>
+<arg>timeout=60</arg>
+<arg>error=OrangeHRM is not opened Properly.</arg>
+</arguments>
+<status status="PASS" endtime="20190509 19:27:04.925" starttime="20190509 19:27:04.827"></status>
+</kw>
+<msg timestamp="20190509 19:27:04.926" level="INFO">${status} = True</msg>
+<status status="PASS" endtime="20190509 19:27:04.926" starttime="20190509 19:27:04.825"></status>
+</kw>
+<kw name="Should Be True" library="BuiltIn">
+<doc>Fails if the given condition is not true.</doc>
+<arguments>
+<arg>${status}</arg>
+</arguments>
+<status status="PASS" endtime="20190509 19:27:04.927" starttime="20190509 19:27:04.927"></status>
+</kw>
+<status status="PASS" endtime="20190509 19:27:04.928" starttime="20190509 19:26:54.079"></status>
+</kw>
+<kw name="Login To OrangeHRM Portal" library="atoms_UI_Keywords">
+<arguments>
+<arg>${userName}</arg>
+<arg>${password}</arg>
+</arguments>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${user_name_field}</arg>
+<arg>${userName}</arg>
+</arguments>
+<msg timestamp="20190509 19:27:04.931" level="INFO">Typing text 'Admin' into text field 'id=txtUsername'.</msg>
+<status status="PASS" endtime="20190509 19:27:05.108" starttime="20190509 19:27:04.930"></status>
+</kw>
+<kw name="Input Password" library="Selenium2Library">
+<doc>Types the given password into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${password_field}</arg>
+<arg>${password}</arg>
+</arguments>
+<msg timestamp="20190509 19:27:05.110" level="INFO">Typing password into text field 'id=txtPassword'.</msg>
+<status status="PASS" endtime="20190509 19:27:05.272" starttime="20190509 19:27:05.109"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${login}</arg>
+</arguments>
+<msg timestamp="20190509 19:27:05.273" level="INFO">Clicking element 'xpath=//INPUT[@id='btnLogin']'.</msg>
+<status status="PASS" endtime="20190509 19:27:09.004" starttime="20190509 19:27:05.273"></status>
+</kw>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<arguments>
+<arg>Wait Until Element Is Visible</arg>
+<arg>${validate_Login}</arg>
+<arg>timeout=60</arg>
+<arg>error=Login Failed.</arg>
+</arguments>
+<assign>
+<var>${status}</var>
+</assign>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>${validate_Login}</arg>
+<arg>timeout=60</arg>
+<arg>error=Login Failed.</arg>
+</arguments>
+<status status="PASS" endtime="20190509 19:27:09.045" starttime="20190509 19:27:09.005"></status>
+</kw>
+<msg timestamp="20190509 19:27:09.046" level="INFO">${status} = True</msg>
+<status status="PASS" endtime="20190509 19:27:09.046" starttime="20190509 19:27:09.004"></status>
+</kw>
+<kw name="Should Be True" library="BuiltIn">
+<doc>Fails if the given condition is not true.</doc>
+<arguments>
+<arg>${status}</arg>
+</arguments>
+<status status="PASS" endtime="20190509 19:27:09.048" starttime="20190509 19:27:09.047"></status>
+</kw>
+<status status="PASS" endtime="20190509 19:27:09.048" starttime="20190509 19:27:04.929"></status>
+</kw>
+<kw name="Landing in employeeList page" library="atoms_UI_Keywords">
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${PIM}</arg>
+</arguments>
+<msg timestamp="20190509 19:27:09.051" level="INFO">Clicking element 'xpath=(//B[text()='PIM'])[1]'.</msg>
+<status status="PASS" endtime="20190509 19:27:10.621" starttime="20190509 19:27:09.050"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${employeelist}</arg>
+</arguments>
+<msg timestamp="20190509 19:27:10.624" level="INFO">Clicking element 'xpath=//A[@id='menu_pim_viewEmployeeList']'.</msg>
+<status status="PASS" endtime="20190509 19:27:11.279" starttime="20190509 19:27:10.623"></status>
+</kw>
+<status status="PASS" endtime="20190509 19:27:11.279" starttime="20190509 19:27:09.049"></status>
+</kw>
+<kw type="teardown" name="Close Browser" library="Selenium2Library">
+<doc>Closes the current browser.</doc>
+<status status="PASS" endtime="20190509 19:27:13.629" starttime="20190509 19:27:11.280"></status>
+</kw>
+<status status="PASS" endtime="20190509 19:27:13.630" critical="yes" starttime="20190509 19:26:54.079"></status>
+</test>
+<doc>This Test Case file Contains Test cases Related to Circuit Module</doc>
+<status status="PASS" endtime="20190509 19:27:13.633" starttime="20190509 19:26:53.863"></status>
+</suite>
+<status status="PASS" endtime="20190509 19:27:13.640" starttime="20190509 19:26:53.861"></status>
+</suite>
+<status status="PASS" endtime="20190509 19:27:13.647" starttime="20190509 19:26:53.842"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="0" pass="1">Critical Tests</stat>
+<stat fail="0" pass="1">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat fail="0" id="s1" name="ATOMS-UI" pass="1">ATOMS-UI</stat>
+<stat fail="0" id="s1-s1" name="testSuites" pass="1">ATOMS-UI.testSuites</stat>
+<stat fail="0" id="s1-s1-s1" name="Sampleselenium" pass="1">ATOMS-UI.testSuites.Sampleselenium</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20190509 19:26:54.074" level="ERROR">Error in file 'D:\T-Mobile\T-Mobile\ATOMS-UI\testSuites\sampleselenium.robot': Resource file '..\..\ATOMS-UI\keywords\Robot_keywords\atoms_UI_circuit_Keywords.robot' does not exist.</msg>
+<msg timestamp="20190509 19:26:54.078" level="ERROR">Error in file 'D:\T-Mobile\T-Mobile\ATOMS-UI\testSuites\sampleselenium.robot': Resource file '..\..\ATOMS-UI\keywords\Robot_keywords\atoms_UI_vendor_Keywords.robot' does not exist.</msg>
+</errors>
+</robot>

@@ -1,0 +1,6 @@
+*** Variables ***
+#************************** Common Variables ******************************
+${HOST}                     https://opensource-demo.orangehrmlive.com/
+${BROWSER}                  chrome
+${userName}					Admin	    
+${password}                 admin123

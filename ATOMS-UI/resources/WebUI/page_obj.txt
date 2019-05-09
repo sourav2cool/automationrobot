@@ -1,0 +1,10 @@
+*** Variables ***
+
+#************************** Common Page Elements *********************************
+
+${login}				xpath=//INPUT[@id='btnLogin']
+${user_name_field}		id=txtUsername
+${password_field}		id=txtPassword
+${validate_Login}		id=welcome
+${PIM}					xpath=(//B[text()='PIM'])[1]
+${employeelist}			xpath=//A[@id='menu_pim_viewEmployeeList']
